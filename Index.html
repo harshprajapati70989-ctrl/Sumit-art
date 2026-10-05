@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumit Art Skill</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #111;
+      color: white;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #1c1c1c;
+      border-bottom: 2px solid #444;
+    }
+    header h1 {
+      color: #ffb300;
+      font-size: 30px;
+    }
+    header p {
+      color: #ccc;
+      margin-top: 5px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+    .hero {
+      text-align: center;
+      padding: 35px 10px;
+    }
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .hero span {
+      color: #ffb300;
+    }
+    .hero p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+    .card {
+      background: #1d1d1d;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 15px;
+      background: #292929;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 10px;
+      resize: none;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #ffb300;
+      color: #111;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ffc933;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #292929;
+      border-radius: 10px;
+      color: #ddd;
+      min-height: 60px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .feature {
+      background: #242424;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .feature h3 {
+      color: #ffb300;
+      margin-bottom: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #888;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🎨 Sumit Art Skill</h1>
+  <p>AI Art & Drawing Assistant</p>
+</header>
+<div class="container">
+  <section class="hero">
+    <h2>Welcome to <span>Sumit Art Skill</span></h2>
+    <p>
+      Drawing, realistic pencil sketch, portrait, painting aur
+      creative art ideas ke liye aapka AI assistant.
+    </p>
+  </section>
+  <div class="card">
+    <h2>🖌️ Ask Your Art Question</h2>
+    <br>
+    <textarea id="question"
+      placeholder="Jaise: Realistic portrait drawing kaise banaye?"></textarea>
+    <button onclick="askAI()">Ask Sumit Art AI</button>
+    <div id="result">
+      Yahan AI ka answer dikhega...
+    </div>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <h3>✏️ Pencil Art</h3>
+      <p>Realistic pencil sketch tips</p>
+    </div>
+    <div class="feature">
+      <h3>👤 Portrait</h3>
+      <p>Face aur portrait drawing guidance</p>
+    </div>
+    <div class="feature">
+      <h3>🎨 Painting</h3>
+      <p>Colour mixing aur painting ideas</p>
+    </div>
+    <div class="feature">
+      <h3>💡 Art Ideas</h3>
+      <p>Naye creative drawing ideas</p>
+    </div>
+  </div>
+</div>
+<footer>
+  © 2026 Sumit Art Skill | Created for Artists 🎨
+</footer>
+<script>
+function askAI() {
+  const question = document.getElementById("question").value;
+  const result = document.getElementById("result");
+  if (question.trim() === "") {
+    result.innerHTML = "⚠️ Pehle apna art question likhiye.";
+    return;
+  }
+  result.innerHTML =
+    "🎨 Sumit Art AI: Aapke question ka answer tayyar kiya ja raha hai...<br><br>" +
+    "Aap realistic drawing ke liye basic shapes, proportions, light-shadow " +
+    "aur gradual shading se shuru kar sakte hain.";
+}
+</script>
+</body>
+</html>
